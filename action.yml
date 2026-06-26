@@ -1,0 +1,9 @@
+name: Install SUPER-PRINT
+description: An action to install SUPER-PRINT
+
+runs:
+  using: composite
+  steps:
+    - name: Install super-print latest version
+      shell: bash
+      run: echo "coucou"
