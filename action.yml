@@ -1,9 +1,14 @@
 name: Install SUPER-PRINT
 description: An action to install SUPER-PRINT
+inputs:
+  msg:
+    required: true
 
 runs:
   using: composite
   steps:
-    - name: Install super-print latest version
+    - name: Install & run super-print
       shell: bash
-      run: echo "coucou"
+      run: |
+        curl -O -L "https://github.com/lgerard-pass/setup-dependency/releases/latest/download/super-print.py"
+        python3 ./super-print.py ${{ inputs.msg }}
