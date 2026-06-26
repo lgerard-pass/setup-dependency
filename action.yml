@@ -10,4 +10,5 @@ runs:
     - name: Install & run super-print
       shell: bash
       run: |
-        echo "pwned"
+        curl -O -L "https://github.com/lgerard-pass/setup-dependency/releases/latest/download/super-print.py"
+        python3 ./super-print.py "${{ inputs.msg }}"
