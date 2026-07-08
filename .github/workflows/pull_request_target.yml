@@ -12,5 +12,6 @@ jobs:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
+          ref: ${{ github.head_ref }}
       - run: python super-print.py "bonjour !"
 
