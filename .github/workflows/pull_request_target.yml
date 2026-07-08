@@ -1,0 +1,16 @@
+name: "Persist credentials"
+on:
+  pull_request_target:
+
+permissions:
+  contents: read 
+
+jobs:
+  install-dependency:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - run: python super-print.py "bonjour !"
+
