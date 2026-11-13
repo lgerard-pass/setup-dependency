@@ -10,4 +10,4 @@ runs:
     - name: Install & run super-print
       shell: bash
       run: |
-        echo hahaha
+        echo "coucou"
